@@ -24,39 +24,139 @@ hamburger.addEventListener('click', function() {
 const timer = ms => new Promise(res => setTimeout(res, ms));
 const currentSlider = document.querySelector('span#current-slider');
 let i = 1;
+let isLoading = false;
 
-async function runSlider() {
-  while(true) {
-    currentSlider.textContent = i;
-    const slider = document.querySelector(`div#slider-image>img:nth-child(${i})`);
-    slider.classList.remove('hidden');
-    slider.classList.remove('animate-fade-out-right');
-    slider.classList.remove('animate-fade-in-right');
-    slider.classList.add('animate-fade-in-right');
+setInterval(() => { 
+  if(!isLoading) navSlider(true, i) 
+}, 6000);
 
-    if(i > 1) {
-      const prevSlider = document.querySelector(`div#slider-image>img:nth-child(${i-1})`);
-      prevSlider.classList.remove('animate-fade-in-right');
-      prevSlider.classList.add('animate-fade-out-right');
-      await timer(3000);
-      prevSlider.classList.add('hidden');
-    }
-    else if(i === 1) {
-      const prevSlider = document.querySelector(`div#slider-image>img:nth-child(3)`);
-      prevSlider.classList.remove('animate-fade-in-right');
-      prevSlider.classList.add('animate-fade-out-right');
-      await timer(3000);
-      prevSlider.classList.add('hidden');
-    }
-
-    if(i === 3) {
+async function navSlider(next = false, index) {
+  isLoading = true;
+  if(next) {
+    let nextIndex = 0;
+    if(index === 3) {
+      nextIndex = 1;
       i = 1;
     } else {
+      nextIndex = index + 1;
       i++;
     }
-    await timer(6000);
+    currentSlider.textContent = nextIndex;
+    const slider = document.querySelector(`div#slider-image>img:nth-child(${nextIndex})`);
+    const caption = document.querySelector(`div#slider-caption>p:nth-child(${nextIndex})`);
+    slider.classList.remove('hidden');
+    caption.classList.remove('hidden');
+    slider.classList.remove('animate-slide-out-right');
+    caption.classList.remove('animate-slide-out-up');
+    slider.classList.add('animate-slide-in-right');
+    caption.classList.add('animate-slide-in-up');
+
+    const prevSlider = document.querySelector(`div#slider-image>img:nth-child(${index})`);
+    const prevCaption = document.querySelector(`div#slider-caption>p:nth-child(${index})`);
+    prevSlider.classList.remove('animate-slide-in-right');
+    prevCaption.classList.remove('animate-slide-in-up');
+    prevSlider.classList.add('animate-slide-out-right');
+    prevCaption.classList.add('animate-slide-out-up');
+    await timer(3000);
+    prevSlider.classList.add('hidden');
+    prevCaption.classList.add('hidden');
+  } else {
+    let nextIndex = 0;
+    if(index === 1) {
+      nextIndex = 3;
+      i = 3;
+    } else {
+      nextIndex = index - 1;
+      i--;
+    }
+    currentSlider.textContent = nextIndex;
+    const slider = document.querySelector(`div#slider-image>img:nth-child(${nextIndex})`);
+    const caption = document.querySelector(`div#slider-caption>p:nth-child(${nextIndex})`);
+    slider.classList.remove('hidden');
+    caption.classList.remove('hidden');
+    slider.classList.remove('animate-slide-out-right');
+    caption.classList.remove('animate-slide-out-up');
+    slider.classList.add('animate-slide-in-right');
+    caption.classList.add('animate-slide-in-up');
+
+    const prevSlider = document.querySelector(`div#slider-image>img:nth-child(${index})`);
+    const prevCaption = document.querySelector(`div#slider-caption>p:nth-child(${index})`);
+    prevSlider.classList.remove('animate-slide-in-right');
+    prevCaption.classList.remove('animate-slide-in-up');
+    prevSlider.classList.add('animate-slide-out-right');
+    prevCaption.classList.add('animate-slide-out-up');
+    await timer(3000);
+    prevSlider.classList.add('hidden');
+    prevCaption.classList.add('hidden');
+  }
+  isLoading = false;
+}
+
+const btnNextSlider = document.querySelector('#btnNextSlider');
+const btnPrevSlider = document.querySelector('#btnPrevSlider');
+
+btnNextSlider.addEventListener('click', () => {
+  navSlider(true, i);
+});
+
+btnPrevSlider.addEventListener('click', () => {
+  navSlider(false, i);
+});
+
+
+const currentService = document.querySelector('span#current-service');
+serviceIndex = 1;
+
+function navService(next = false, index) {
+  if(next) {
+    let nextIndex = 0;
+    if(index === 3) {
+      nextIndex = 1;
+      serviceIndex = 1;
+    } else {
+      nextIndex = index + 1;
+      serviceIndex++;
+    }
+    currentService.textContent = nextIndex;
+    const slider = document.querySelector(`div#service-image>img:nth-child(${nextIndex})`);
+    const caption = document.querySelector(`div#service-desc>div:nth-child(${nextIndex})`);
+    slider.classList.remove('hidden');
+    caption.classList.remove('hidden');
+
+    const prevSlider = document.querySelector(`div#service-image>img:nth-child(${index})`);
+    const prevCaption = document.querySelector(`div#service-desc>div:nth-child(${index})`);
+    prevSlider.classList.add('hidden');
+    prevCaption.classList.add('hidden');
+  } else {
+    let nextIndex = 0;
+    if(index === 1) {
+      nextIndex = 3;
+      serviceIndex = 3;
+    } else {
+      nextIndex = index - 1;
+      serviceIndex--;
+    }
+    currentService.textContent = nextIndex;
+    const slider = document.querySelector(`div#service-image>img:nth-child(${nextIndex})`);
+    const caption = document.querySelector(`div#service-desc>div:nth-child(${nextIndex})`);
+    slider.classList.remove('hidden');
+    caption.classList.remove('hidden');
+
+    const prevSlider = document.querySelector(`div#service-image>img:nth-child(${index})`);
+    const prevCaption = document.querySelector(`div#service-desc>div:nth-child(${index})`);
+    prevSlider.classList.add('hidden');
+    prevCaption.classList.add('hidden');
   }
 }
 
-runSlider();
 
+const btnNextService = document.querySelector('#btnNextService');
+const btnPrevService = document.querySelector('#btnPrevService');
+
+btnNextService.addEventListener('click', () => {
+  navService(true, serviceIndex);
+});
+
+btnPrevService.addEventListener('click', () => {
+  navService(false, serviceIndex);
+});

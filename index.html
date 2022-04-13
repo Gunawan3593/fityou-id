@@ -42,39 +42,39 @@
   </header>
 <!-- Header end -->
 <!-- Hero Section start -->
-  <section id="home" class="relative h-[800px]">
+  <section id="home" class="relative h-[300px] lg:h-[800px]">
     <div id="slider-image">
-      <img class="fixed bg-cover w-full hidden" src="assets/images/slider-1.jpg" alt="Slider 1">
+      <img class="fixed bg-cover w-full animate-slide-in-right" src="assets/images/slider-1.jpg" alt="Slider 1">
       <img class="fixed bg-cover w-full hidden" src="assets/images/slider-2.jpg" alt="Slider 2">
       <img class="fixed bg-cover w-full hidden" src="assets/images/slider-3.jpg" alt="Slider 3">
     </div>
     <div id="slider-caption">
-      <p class="fixed right-8 top-[300px] max-w-md text-3xl font-semibold text-dark hidden">Izinkan kami membantu membuat bisnismu menjadi nomor 1</p>
-      <p class="fixed right-8 top-[300px] max-w-md text-3xl font-semibold text-dark hidden">Beritahu semua orang tentang produk atau jasa yang kalian miliki lewat iklan</p>
-      <p class="fixed right-8 top-[300px] max-w-md text-3xl font-semibold text-dark hidden">Optimalkan Reveneu Bisnis anda bersama kami</p>
+      <p class="absolute bottom-14 text-sm px-5 text-center lg:fixed lg:right-8 lg:top-[300px] lg:max-w-md lg:text-3xl font-semibold text-dark animate-slide-in-up">Izinkan kami membantu membuat bisnismu menjadi nomor 1</p>
+      <p class="absolute bottom-14 text-sm px-5 text-center lg:fixed lg:right-8 lg:top-[300px] lg:max-w-md lg:text-3xl font-semibold text-dark animate-slide-in-up hidden">Beritahu semua orang tentang produk atau jasa yang kalian miliki lewat iklan</p>
+      <p class="absolute bottom-14 text-sm px-5 text-center lg:fixed lg:right-8 lg:top-[300px] lg:max-w-md lg:text-3xl font-semibold text-dark animate-slide-in-up hidden">Optimalkan Kinerja dan Reveneu Bisnis anda bersama kami</p>
     </div>
-    <div class="w-[260px] h-[170px] bg-secondary absolute rounded-br-[100px] px-[60px] pt-[30px] pb-[20px] left-0 font-bold text-2xl leading-[1rem] z-50 font">
-      <span class="block ml-20">/ 03</span>
-      <span class="text-7xl ml-2 text-tertiary">0<span id="current-slider">1</span></span>
-      <div class="flex gap-10 justify-center mt-1 w-full">
-        <a href="#" class="text-slate-400 hover:text-tertiary">
+    <div class="pt-5 w-[100px] h-[100px] lg:w-[260px] lg:h-[170px] bg-secondary absolute rounded-br-[100px] lg:px-[60px] lg:pt-[30px] lg:pb-[20px] left-0 font-bold text-sm lg:text-2xl leading-[1rem] z-50 font">
+      <span class="block ml-10 lg:ml-20">/ 03</span>
+      <span class="text-3xl lg:text-7xl ml-2 text-tertiary">0<span id="current-slider">1</span></span>
+      <div class="hidden lg:flex gap-10 justify-center mt-1 w-full">
+        <button type="button" id="btnPrevSlider" class="text-slate-400 hover:text-tertiary">
           <svg class="fill-current" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="40px" height="17.515px" viewBox="0 0 40 17.515" enable-background="new 0 0 40 17.515" xml:space="preserve">
           <polygon fill-rule="evenodd" clip-rule="evenodd" points="8.757,0 0,8.757 8.757,17.515 10.545,15.727 4.841,10.022 40,10.022 
             40,7.493 4.841,7.493 10.545,1.788 "/>
           </svg>
-        </a>
+        </button>
 
-        <a href="#" class="text-slate-400 hover:text-tertiary">
+        <button type="button" id="btnNextSlider" class="text-slate-400 hover:text-tertiary">
           <svg class="fill-current" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="40px" height="17.515px" viewBox="0 0 40 17.515" enable-background="new 0 0 40 17.515" xml:space="preserve">
           <polygon fill-rule="evenodd" clip-rule="evenodd" points="31.242,0 40,8.757 31.242,17.515 29.455,15.727 35.159,10.022 0,10.022 
             0,7.493 35.159,7.493 29.455,1.788 "/>
           </svg>
-        </a>
+        </button>
       </div>
     </div>
-    <div class="absolute bg-white w-28 h-full">
+    <div class="absolute bg-white w-28 h-full hidden sm:flex">
       <div class="w-[2px] h-[600px] bg-primary absolute ml-[50px]"></div>
       <div class="absolute bottom-0 ml-[30px] flex flex-col gap-5">
         <!-- Facebook -->
@@ -94,13 +94,13 @@
   </section>
 <!-- Hero Section end-->
 <!-- About Section -->
-  <section id="about" class="relative bg-white">
+  <section id="about" class="pb-20 relative bg-white z-50">
     <div class="flex gap-5">
       <div class="flex-1">
         <h1 class="text-[4rem] font-bold text-primary ml-1">Tentang Kami</h1>
         <div class="container">
           <h4 class="text-3xl text-dark font-semibold">FitYou adalah Agensi pemasaran Digital</h4>
-          <p class="mt-5 text-xl mb-32">Kami berada di Jakarta, Surabaya, dan Bali. Kami membantu berbagai bisnis untuk mengoptimalkan pendapatannya dengan strategi promosi Online yang tepat. 
+          <p class="mt-5 text-md mb-32">Kami berada di Jakarta, Surabaya, dan Bali. Kami membantu berbagai bisnis untuk mengoptimalkan pendapatannya dengan strategi promosi Online yang tepat. 
             FitYou Mengedepankan strategi marketing yang berfokus pada akuisisi traffic dan leads yang berkualitas utuk memudahkan klien dalam melakukan penjualan.</p>
           <a href="#" class="text-xl text-dark font-semibold rounded-full bg-tertiary px-5 py-3 hover:bg-opacity-90 hover:text-tertiary hover:bg-transparent  border border-transparent hover:border-tertiary transition duration-300 ease-in-out">Hubungi Kami</a>
         </div>
@@ -111,18 +111,22 @@
 <!-- About Section end -->
 
 <!-- Benefit start -->
-  <section id="benefit" class="pt-20 pb-20 bg-white relative">
+  <section id="benefit" class="bg-white cursor-pointer relative">
     <div class="container">
       <div class="flex justify-center">
-        <div class="h-[600px] w-1/2 bg-secondary relative flex flex-col">
-          <img class="w-[300px] h-[300px] bg-cover absolute left-[150px] top-[150px] opacity-80" src="./assets/images/benefit-1.png" alt="benefit 1">
-          <p class="text-xl text-dark font-semibold opacity-80 text-center mt-20">Menawarkan solusi pemasaran digital yang terintegrasi dengan harga yang ramah.</p>
-          <h1 class="text-5xl text-dark font-bold opacity-80 -rotate-90 absolute bottom-5 origin-bottom-left left-20 max-w-md">Harga Terjangkau</h1>
+        <div class="h-[600px] w-1/2 bg-secondary relative flex flex-col group">
+          <div class="absolute h-full w-full opacity-0 group-hover:opacity-40 z-30 bg-white transition-opacity duration-1000 ease-in-out"></div>
+          <h3 class="absolute left-[50%] top-[50%] -translate-x-[50%] translate-y-[5rem] group-hover:-translate-y-[50%] opacity-0 group-hover:opacity-90 z-50 text-2xl font-bold text-dark transition duration-1000 uppercase">Harga Terjangkau</h3>
+          <img class="w-[300px] h-[300px] bg-cover absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] group-hover:scale-[2] transition duration-[3000ms] ease-in-out" src="./assets/images/benefit-1.png" alt="benefit 1">
+          <p class="text-xl text-dark font-semibold opacity-80 text-center mt-20 absolute  group-hover:-translate-y-[20rem] transition duration-[1500ms] ease-out">Menawarkan solusi pemasaran digital yang terintegrasi dengan harga yang ramah.</p>
+          <h1 class="text-5xl text-dark font-bold opacity-80 -rotate-90 absolute bottom-5 origin-bottom-left left-20 max-w-md group-hover:translate-y-[40rem] transition duration-[1500ms] ease-out">Harga Terjangkau</h1>
         </div>
-        <div class="w-1/2 bg-tertiary relative">
-          <img class="w-[300px] h-[300px] absolute left-[150px] top-[150px] opacity-80" src="./assets/images/benefit-2.png" alt="benefit 2">
-          <p class="text-xl text-dark font-semibold opacity-80 text-center mt-20">Dengan tim yang beragam kami bekerjasams untuk memastikan iklan anda berhasil di berbagai kanal media.</p>
-          <h1 class="text-5xl text-dark font-bold opacity-80 -rotate-90 absolute bottom-5 origin-bottom-left left-32 max-w-md">Layanan Terbaik dan Full Support</h1>
+        <div class="w-1/2 bg-tertiary relative group">
+          <div class="absolute h-full w-full opacity-0 group-hover:opacity-40 z-30 bg-white transition-opacity duration-1000 ease-in-out"></div>
+          <h3 class="absolute left-[50%] top-[50%] -translate-x-[50%] translate-y-[5rem] group-hover:-translate-y-[50%] opacity-0 group-hover:opacity-90 z-50 text-2xl font-bold text-dark transition duration-1000 uppercase">Layanan Terbaik dan Full Support</h3>
+          <img class="w-[300px] h-[300px] bg-cover absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] group-hover:scale-[2] transition duration-[3000ms] ease-in-out" src="./assets/images/benefit-2.png" alt="benefit 2">
+          <p class="text-xl text-dark font-semibold opacity-80 text-center mt-20 absolute  group-hover:-translate-y-[20rem] transition duration-[1500ms] ease-out">Dengan tim yang beragam kami bekerjasams untuk memastikan iklan anda berhasil di berbagai kanal media.</p>
+          <h1 class="text-5xl text-dark font-bold opacity-80 -rotate-90 absolute bottom-5 origin-bottom-left left-32 max-w-md group-hover:translate-y-[40rem] transition duration-[1500ms] ease-out">Layanan Terbaik dan Full Support</h1>
         </div>
       </div>
     </div>
@@ -130,37 +134,53 @@
 <!-- Benefit end -->
 
 <!-- Services start -->
-  <section id="service" class="bg-primary relative">
+  <section id="service" class="pt-20 bg-primary relative">
     <div class="container relative flex min-h-[500px]">
       <div class="w-[260px] h-[170px] bg-transparent absolute rounded-br-[100px] px-[60px] pt-[30px] pb-[20px] left-0 font-bold text-2xl leading-[1rem] z-50 font">
         <span class="block ml-20">/ 03</span>
-        <span class="text-7xl ml-2 text-tertiary">03</span>
+        <span class="text-7xl ml-2 text-tertiary">0<span id="current-service">1</span></span>
         <div class="flex gap-10 justify-center mt-1 w-full">
-          <a href="#" class="text-slate-400 hover:text-tertiary">
+          <button type="button" id="btnPrevService" class="text-slate-400 hover:text-tertiary">
             <svg class="fill-current" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               width="40px" height="17.515px" viewBox="0 0 40 17.515" enable-background="new 0 0 40 17.515" xml:space="preserve">
             <polygon fill-rule="evenodd" clip-rule="evenodd" points="8.757,0 0,8.757 8.757,17.515 10.545,15.727 4.841,10.022 40,10.022 
               40,7.493 4.841,7.493 10.545,1.788 "/>
             </svg>
-          </a>
+          </button>
 
-          <a href="#" class="text-slate-400 hover:text-tertiary">
+          <button type="button" id="btnNextService" class="text-slate-400 hover:text-tertiary">
             <svg class="fill-current" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               width="40px" height="17.515px" viewBox="0 0 40 17.515" enable-background="new 0 0 40 17.515" xml:space="preserve">
             <polygon fill-rule="evenodd" clip-rule="evenodd" points="31.242,0 40,8.757 31.242,17.515 29.455,15.727 35.159,10.022 0,10.022 
               0,7.493 35.159,7.493 29.455,1.788 "/>
             </svg>
-          </a>
+          </button>
         </div>
       </div>
-      <div class="mt-40 max-w-md z-40">
-        <h4 class="text-3xl text-dark font-semibold">Paket Zero Risk</h4>
-        <p class="mt-5 text-xl mb-20">paket zero risk memberikan garansi kepada klien karena klien hanya membayar sesuai dengan leads yang di dapatkan
-          (performance based fee).</p>
-        <a href="#" class="text-xl text-dark font-semibold rounded-full bg-tertiary px-5 py-3 hover:bg-opacity-90 hover:bg-transparent hover:text-tertiary  border border-transparent hover:border-tertiary transition duration-300 ease-in-out">Hubungi Kami</a>
+      <div id="service-desc">
+        <div class="mt-40 max-w-md z-40">
+          <h4 class="text-3xl text-dark font-semibold">Paket Zero Risk</h4>
+          <p class="mt-5 text-md mb-20">paket zero risk memberikan garansi kepada klien karena klien hanya membayar sesuai dengan leads yang di dapatkan
+            (performance based fee).</p>
+          <a href="#" class="text-md text-dark font-semibold rounded-full bg-tertiary px-5 py-3 hover:bg-opacity-90 hover:bg-transparent hover:text-tertiary  border border-transparent hover:border-tertiary transition duration-300 ease-in-out">Pelajari lebih lanjut</a>
+        </div>
+        <div class="mt-40 max-w-md z-40 hidden">
+          <h4 class="text-3xl text-dark font-semibold">Paket Flexible</h4>
+          <p class="mt-5 text-md mb-20">paket flexible memberikan  kebebasan pada klien untuk menentukan berapa budget yang diinginkan untuk beriklan.</p>
+          <a href="#" class="text-md text-dark font-semibold rounded-full bg-tertiary px-5 py-3 hover:bg-opacity-90 hover:bg-transparent hover:text-tertiary  border border-transparent hover:border-tertiary transition duration-300 ease-in-out">Pelajari lebih lanjut</a>
+        </div>
+        <div class="mt-40 max-w-md z-40 hidden">
+          <h4 class="text-3xl text-dark font-semibold">Paket Instagram</h4>
+          <p class="mt-5 text-md mb-20">Paket Instagram sangat cocok untuk startup atau UMKM yang baru ingin membangun awareness di media social instagram.</p>
+          <a href="#" class="text-md text-dark font-semibold rounded-full bg-tertiary px-5 py-3 hover:bg-opacity-90 hover:bg-transparent hover:text-tertiary  border border-transparent hover:border-tertiary transition duration-300 ease-in-out">Pelajari lebih lanjut</a>
+        </div>
       </div>
     </div>
-    <img class="absolute bottom-0 right-0 rounded-tl-[300px] opacity-90" src="./assets/images/paket-1.jpg" alt="paket 1">
+    <div id="service-image">
+      <img class="absolute bottom-0 right-0 rounded-tl-[300px] opacity-90" src="./assets/images/paket-1.jpg" alt="paket 1">
+      <img class="absolute bottom-0 right-0 rounded-tl-[300px] opacity-90 hidden" src="./assets/images/paket-2.jpg" alt="paket 2">
+      <img class="absolute bottom-0 right-0 rounded-tl-[300px] opacity-90 hidden" src="./assets/images/paket-3.jpg" alt="paket 3">
+    </div>
   </section>
 <!-- Services end -->
 <!-- Footer Start -->
