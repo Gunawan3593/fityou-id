@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '50px'
+      padding: '16px'
     },
     extend: {
       colors: {
@@ -24,14 +24,14 @@ module.exports = {
             },
         },
         'fade-out-up': {
-            'from': {
+            '0%': {
                 opacity: '1',
                 transform: 'translateY(0px)'
             },
-            'to': {
+            '100%': {
                 opacity: '0',
                 transform: 'translateY(500px)'
-            },
+            }
         },
         'fade-in-right': {
           '0%': {
@@ -44,12 +44,12 @@ module.exports = {
           },
         },
         'fade-out-right': {
-            'from': {
-                opacity: '1',
+            '0%': {
+                opacity: '0',
                 transform: 'translateX(0)'
             },
-            'to': {
-                opacity: '0',
+            '100%': {
+                opacity: '1',
                 transform: 'translateX(100%)'
             },
         },

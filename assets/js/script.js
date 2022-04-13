@@ -26,8 +26,8 @@ const currentSlider = document.querySelector('span#current-slider');
 let i = 1;
 let isLoading = false;
 
-setInterval(() => { 
-  if(!isLoading) navSlider(true, i) 
+let autoSlider = setInterval(() => { 
+  navSlider(true, i); 
 }, 6000);
 
 async function navSlider(next = false, index) {
@@ -42,6 +42,13 @@ async function navSlider(next = false, index) {
       i++;
     }
     currentSlider.textContent = nextIndex;
+    const prevSlider = document.querySelector(`div#slider-image>img:nth-child(${index})`);
+    const prevCaption = document.querySelector(`div#slider-caption>p:nth-child(${index})`);
+    prevSlider.classList.remove('animate-slide-in-right');
+    prevCaption.classList.remove('animate-slide-in-up');
+    prevSlider.classList.add('animate-slide-out-right');
+    prevCaption.classList.add('animate-slide-out-up');
+
     const slider = document.querySelector(`div#slider-image>img:nth-child(${nextIndex})`);
     const caption = document.querySelector(`div#slider-caption>p:nth-child(${nextIndex})`);
     slider.classList.remove('hidden');
@@ -51,13 +58,7 @@ async function navSlider(next = false, index) {
     slider.classList.add('animate-slide-in-right');
     caption.classList.add('animate-slide-in-up');
 
-    const prevSlider = document.querySelector(`div#slider-image>img:nth-child(${index})`);
-    const prevCaption = document.querySelector(`div#slider-caption>p:nth-child(${index})`);
-    prevSlider.classList.remove('animate-slide-in-right');
-    prevCaption.classList.remove('animate-slide-in-up');
-    prevSlider.classList.add('animate-slide-out-right');
-    prevCaption.classList.add('animate-slide-out-up');
-    await timer(3000);
+    await timer(1000);
     prevSlider.classList.add('hidden');
     prevCaption.classList.add('hidden');
   } else {
@@ -85,9 +86,9 @@ async function navSlider(next = false, index) {
     prevCaption.classList.remove('animate-slide-in-up');
     prevSlider.classList.add('animate-slide-out-right');
     prevCaption.classList.add('animate-slide-out-up');
-    await timer(3000);
-    prevSlider.classList.add('hidden');
-    prevCaption.classList.add('hidden');
+    await timer(1000);
+    prevSlider.classList.toggle('hidden');
+    prevCaption.classList.toggle('hidden');
   }
   isLoading = false;
 }
@@ -96,11 +97,21 @@ const btnNextSlider = document.querySelector('#btnNextSlider');
 const btnPrevSlider = document.querySelector('#btnPrevSlider');
 
 btnNextSlider.addEventListener('click', () => {
+  if (isLoading) return;
+  clearInterval(autoSlider);
   navSlider(true, i);
+  autoSlider = setInterval(() => { 
+    navSlider(true, i); 
+  }, 6000);
 });
 
-btnPrevSlider.addEventListener('click', () => {
+btnPrevSlider.addEventListener('click', async () => {
+  if (isLoading) return;
+  clearInterval(autoSlider);
   navSlider(false, i);
+  autoSlider = setInterval(() => { 
+    navSlider(true, i); 
+  }, 6000);
 });
 
 
@@ -118,6 +129,7 @@ function navService(next = false, index) {
       serviceIndex++;
     }
     currentService.textContent = nextIndex;
+    
     const slider = document.querySelector(`div#service-image>img:nth-child(${nextIndex})`);
     const caption = document.querySelector(`div#service-desc>div:nth-child(${nextIndex})`);
     slider.classList.remove('hidden');
