@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,12 +18,12 @@
         </div>
         <div class="flex items-center px-4">
           <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
-            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
-            <span class="hamburger-line transition duration-300 ease-in-out"></span>
-            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+            <span id="hamburger-line-top" class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+            <span id="hamburger-line-mid" class="hamburger-line transition duration-300 ease-in-out"></span>
+            <span id="hamburger-line-bottom" class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
           </button>
 
-          <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none z-20">
+          <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none z-30">
             <ul class="block lg:flex">
               <li class="group">
                 <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Tentang Kami</a>
@@ -32,7 +32,7 @@
                 <a href="#service" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Layanan</a>
               </li>
               <li class="group">
-                <a href="https://api.whatsapp.com/send?phone=+6281238841818&text=Hallo,%20saya%20mau%20tau%20info%20tentang%20Fityou.id" target="_blank" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Konsultasi</a>
+                <a href="https://api.whatsapp.com/send?phone=+6281238841818&text=Hallo,%20saya%20mau%20konsultasi%20mengenai%20Fityou.id" target="_blank" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Konsultasi</a>
               </li>
             </ul>
           </nav>
@@ -68,7 +68,7 @@
       <p class="absolute z-20 bottom-5 text-sm px-5 text-center lg:fixed lg:right-8 lg:top-[300px] lg:max-w-md lg:text-3xl font-semibold text-secondary hidden">Beritahu semua orang tentang produk atau jasa yang kalian miliki lewat iklan</p>
       <p class="absolute z-20 bottom-5 text-sm px-5 text-center lg:fixed lg:right-8 lg:top-[300px] lg:max-w-md lg:text-3xl font-semibold text-secondary hidden">Optimalkan Reveneu Bisnis anda bersama kami</p>
     </div>
-    <div class="top-0 pt-5 w-[100px] h-[100px] lg:w-[260px] lg:h-[170px] bg-secondary absolute rounded-br-[100px] lg:px-[60px] lg:pt-[30px] lg:pb-[20px] left-0 font-bold text-sm lg:text-2xl leading-[1rem] z-50 font">
+    <div class="top-0 pt-5 w-[100px] h-[100px] lg:w-[260px] lg:h-[170px] bg-secondary absolute rounded-br-[100px] lg:px-[60px] lg:pt-[30px] lg:pb-[20px] left-0 font-bold text-sm lg:text-2xl leading-[1rem] z-20 font">
       <span class="block ml-10 lg:ml-20">/ 03</span>
       <span class="text-3xl lg:text-7xl ml-2 text-tertiary">0<span id="current-slider">1</span></span>
       <div class="hidden lg:flex gap-10 justify-center mt-1 w-full">
@@ -117,7 +117,9 @@
           <h4 class="text-3xl text-dark font-semibold mt-5">FitYou adalah Agensi pemasaran Digital</h4>
           <p class="mt-5 text-md mb-20">Kami berada di Jakarta, Surabaya, dan Bali. Kami membantu berbagai bisnis untuk mengoptimalkan pendapatannya dengan strategi promosi Online yang tepat. 
             FitYou Mengedepankan strategi marketing yang berfokus pada akuisisi traffic dan leads yang berkualitas utuk memudahkan klien dalam melakukan penjualan.</p>
-          <a href="https://api.whatsapp.com/send?phone=+6281238841818&text=Hallo,%20saya%20mau%20tau%20info%20tentang%20Fityou.id" target="_blank" class="text-xl text-dark font-semibold rounded-full bg-tertiary px-5 py-3 hover:bg-opacity-90 hover:text-tertiary hover:bg-transparent  border border-transparent hover:border-tertiary transition duration-300 ease-in-out">Hubungi Kami</a>
+          <div class="text-center lg:text-left">
+            <a href="https://api.whatsapp.com/send?phone=+6281238841818&text=Hallo,%20saya%20mau%20tau%20info%20tentang%20Fityou.id" target="_blank" class="text-xl text-dark font-semibold rounded-full bg-tertiary px-5 py-3 hover:bg-opacity-90 hover:text-tertiary hover:bg-transparent  border border-transparent hover:border-tertiary transition duration-300 ease-in-out">Hubungi Kami</a>
+          </div>
         </div>
       </div>
       <img class="hidden lg:flex w-[60%] h-[600px] rounded-bl-[30%] bg-cover object-cover" src="assets/images/about.jpg" alt="about image">
@@ -178,17 +180,17 @@
           <h4 class="text-3xl text-dark font-semibold">Paket Zero Risk</h4>
           <p class="mt-5 text-md mb-20">paket zero risk memberikan garansi kepada klien karena klien hanya membayar sesuai dengan leads yang di dapatkan
             (performance based fee).</p>
-          <a href="https://api.whatsapp.com/send?phone=+6281238841818&text=Hallo,%20saya%20mau%20tau%20info%20tentang%20Fityou.id" target="_blank" class="text-md text-dark font-semibold rounded-full bg-tertiary px-5 py-3 hover:bg-opacity-90 hover:bg-transparent hover:text-tertiary  border border-transparent hover:border-tertiary transition duration-300 ease-in-out">Pelajari lebih lanjut</a>
+          <a href="https://api.whatsapp.com/send?phone=+6281238841818&text=Hallo,%20saya%20mau%20tau%20info%20tentang%20Paket%20Zero%20Risk%20Fityou.id" target="_blank" class="text-md text-dark font-semibold rounded-full bg-tertiary px-5 py-3 hover:bg-opacity-90 hover:bg-transparent hover:text-tertiary  border border-transparent hover:border-tertiary transition duration-300 ease-in-out">Pelajari lebih lanjut</a>
         </div>
         <div class="absolute mt-40 max-w-md z-10 hidden">
           <h4 class="text-3xl text-dark font-semibold">Paket Flexible</h4>
           <p class="mt-5 text-md mb-20">paket flexible memberikan  kebebasan pada klien untuk menentukan berapa budget yang diinginkan untuk beriklan.</p>
-          <a href="https://api.whatsapp.com/send?phone=+6281238841818&text=Hallo,%20saya%20mau%20tau%20info%20tentang%20Fityou.id" target="_blank" class="text-md text-dark font-semibold rounded-full bg-tertiary px-5 py-3 hover:bg-opacity-90 hover:bg-transparent hover:text-tertiary  border border-transparent hover:border-tertiary transition duration-300 ease-in-out">Pelajari lebih lanjut</a>
+          <a href="https://api.whatsapp.com/send?phone=+6281238841818&text=Hallo,%20saya%20mau%20tau%20info%20tentang%20Paket%20Flexible%20Fityou.id" target="_blank" class="text-md text-dark font-semibold rounded-full bg-tertiary px-5 py-3 hover:bg-opacity-90 hover:bg-transparent hover:text-tertiary  border border-transparent hover:border-tertiary transition duration-300 ease-in-out">Pelajari lebih lanjut</a>
         </div>
         <div class="absolute mt-40 max-w-md z-10 hidden">
           <h4 class="text-3xl text-dark font-semibold">Paket Instagram</h4>
           <p class="mt-5 text-md mb-20">Paket Instagram sangat cocok untuk startup atau UMKM yang baru ingin membangun awareness di media social instagram.</p>
-          <a href="https://api.whatsapp.com/send?phone=+6281238841818&text=Hallo,%20saya%20mau%20tau%20info%20tentang%20Fityou.id" target="_blank" class="text-md text-dark font-semibold rounded-full bg-tertiary px-5 py-3 hover:bg-opacity-90 hover:bg-transparent hover:text-tertiary  border border-transparent hover:border-tertiary transition duration-300 ease-in-out">Pelajari lebih lanjut</a>
+          <a href="https://api.whatsapp.com/send?phone=+6281238841818&text=Hallo,%20saya%20mau%20tau%20info%20tentang%20Paket%20Instagram%20Fityou.id" target="_blank" class="text-md text-dark font-semibold rounded-full bg-tertiary px-5 py-3 hover:bg-opacity-90 hover:bg-transparent hover:text-tertiary  border border-transparent hover:border-tertiary transition duration-300 ease-in-out">Pelajari lebih lanjut</a>
         </div>
       </div>
     </div>
@@ -213,6 +215,13 @@
   </div>
 </footer>
 <!-- Footer end -->
+
+<!-- Back to Top start -->
+<a href="#home" class="hidden fixed justify-center items-center z-50 bottom-28 p-4 right-4 h-14 w-14 bg-secondary rounded-full hover:animate-pulse" id="to-top">
+  <span class="block h-5 w-5 border-t-2 border-l-2 rotate-45 mt-2 border-slate-500"></span>
+</a>
+<!-- Back to Top end -->
+
 <!-- My Script -->
 <script src="assets/js/script.js"></script>
 </body>

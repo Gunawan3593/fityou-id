@@ -2,18 +2,25 @@
 window.onscroll = function() {
   const header = document.querySelector('header');
   const fixedNav = header.offsetTop;
-
+  const toTop = document.querySelector('#to-top');
 
   if(window.pageYOffset > fixedNav) {
     header.classList.add('navbar-fixed');
+    toTop.classList.remove('hidden');
+    toTop.classList.add('flex');
   } else {
     header.classList.remove('navbar-fixed');
+    toTop.classList.add('hidden');
+    toTop.classList.remove('flex');
   }
 } 
 
 // Hamburger
 
 const hamburger = document.querySelector('#hamburger');
+const hamburgerLineTop = document.querySelector('#hamburger-line-top');
+const hamburgerLineMid = document.querySelector('#hamburger-line-mid');
+const hamburgerLineBottom = document.querySelector('#hamburger-line-bottom');
 const navMenu = document.querySelector('#nav-menu');
 
 hamburger.addEventListener('click', function() {
@@ -161,6 +168,13 @@ function navService(next = false, index) {
   }
 }
 
+// click out humberger
+window.addEventListener('click', function(e) {
+  if(e.target !== hamburger && e.target !== navMenu && e.target !== hamburgerLineTop && e.target !== hamburgerLineMid && e.target !== hamburgerLineBottom ) {
+    hamburger.classList.remove('hamburger-active');
+    navMenu.classList.add('hidden');
+  }
+});
 
 const btnNextService = document.querySelector('#btnNextService');
 const btnPrevService = document.querySelector('#btnPrevService');
