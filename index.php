@@ -16,7 +16,7 @@
     <div class="w-full">
       <div class="flex items-center justify-between relative">
         <div class="px-4">
-          <a href="#home" class="block"><img class="w-14 lg:w-20" src="assets/images/logo.png?<?= time() ?>" alt="logo"></a>
+          <a href="#home" class="block"><img class="w-14 lg:w-20" src="assets/images/logo.png?v=1" alt="logo"></a>
         </div>
         <div class="flex items-center px-4">
           <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
@@ -83,9 +83,9 @@
       </a>
     </div>
     <div id="slider-image">
-      <img class="fixed bg-cover object-cover h-[300px] lg:h-full w-full animate-slide-in-right" src="assets/images/slider-1.jpg?<?= time() ?>" alt="Slider 1">
-      <img class="fixed bg-cover object-cover h-[300px] lg:h-full w-full hidden" src="assets/images/slider-2.jpg?<?= time() ?>" alt="Slider 2">
-      <img class="fixed bg-cover object-cover h-[300px] lg:h-full w-full hidden" src="assets/images/slider-3.jpg?<?= time() ?>" alt="Slider 3">
+      <img class="fixed bg-cover object-cover h-[300px] lg:h-full w-full animate-slide-in-right" src="assets/images/slider-1.jpg?v=1" alt="Slider 1">
+      <img class="fixed bg-cover object-cover h-[300px] lg:h-full w-full hidden" src="assets/images/slider-2.jpg?v=1" alt="Slider 2">
+      <img class="fixed bg-cover object-cover h-[300px] lg:h-full w-full hidden" src="assets/images/slider-3.jpg?v=1" alt="Slider 3">
     </div>
     <div id="slider-caption">
       <p class="absolute z-20 bottom-5 text-sm px-5 text-center lg:fixed lg:right-8 lg:top-[300px] lg:max-w-md lg:text-3xl font-semibold text-secondary animate-slide-in-up">Izinkan kami membantu membuat bisnismu menjadi nomor 1</p>
@@ -154,7 +154,7 @@
             </div>
           </div>
         </div>
-        <img class="hidden lg:flex w-[60%] h-[600px] rounded-bl-[30%] bg-cover object-cover" src="assets/images/about.jpg?<?= time() ?>" alt="about image">
+        <img class="hidden lg:flex w-[60%] h-[600px] rounded-bl-[30%] bg-cover object-cover" src="assets/images/about.jpg?v=1" alt="about image">
       </div>
     </section>
     <!-- About Section end -->
@@ -166,14 +166,14 @@
           <div class="h-[600px] w-full max-w-none md:max-w-md lg:w-1/2 bg-secondary dark:bg-slate-500 relative flex flex-col group z-10 overflow-hidden items-center">
             <div class="absolute h-full w-full opacity-0 group-hover:opacity-40 z-30 bg-white dark:bg-dark transition-opacity duration-1000 ease-in-out"></div>
             <h3 class="absolute text-center left-[50%] top-[50%] -translate-x-[50%] translate-y-[5rem] group-hover:-translate-y-[50%] opacity-0 group-hover:opacity-90 z-50 text-2xl font-bold text-dark transition duration-1000 uppercase dark:text-white">Harga Terjangkau</h3>
-            <img class="w-[300px] h-[300px] bg-cover absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] group-hover:scale-[2] transition duration-[3000ms] ease-in-out" src="assets/images/benefit-1.png?<?= time() ?>" alt="benefit 1">
+            <img class="w-[300px] h-[300px] bg-cover absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] group-hover:scale-[2] transition duration-[3000ms] ease-in-out" src="assets/images/benefit-1.png?v=1" alt="benefit 1">
             <p class="text-xl text-dark font-semibold opacity-80 text-center mt-20 absolute  group-hover:-translate-y-[20rem] transition duration-[1500ms] ease-out dark:text-slate-200">Menawarkan solusi pemasaran digital yang terintegrasi dengan harga yang ramah.</p>
             <h1 class="uppercase text-2xl lg:text-3xl text-dark font-bold opacity-80 lg:-rotate-90 absolute bottom-5 lg:origin-bottom-left lg:left-[2.75rem] text-center lg:text-left max-w-md group-hover:translate-y-[40rem] transition duration-[1500ms] ease-out dark:text-white">Harga Terjangkau</h1>
           </div>
           <div class="h-[600px] w-full max-w-none md:max-w-md lg:w-1/2 bg-tertiary dark:bg-slate-700 relative group flex flex-col overflow-hidden items-center">
             <div class="absolute h-full w-full opacity-0 group-hover:opacity-40 z-30 bg-white dark:bg-dark transition-opacity duration-1000 ease-in-out"></div>
             <h3 class="absolute text-center left-[50%] top-[50%] -translate-x-[50%] translate-y-[5rem] group-hover:-translate-y-[50%] opacity-0 group-hover:opacity-90 z-50 text-2xl font-bold text-dark transition duration-1000 uppercase dark:text-white">Layanan Terbaik dan Full Support</h3>
-            <img class="w-[300px] h-[300px] bg-cover absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] group-hover:scale-[2] transition duration-[3000ms] ease-in-out" src="assets/images/benefit-2.png?<?= time() ?>" alt="benefit 2">
+            <img class="w-[300px] h-[300px] bg-cover absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] group-hover:scale-[2] transition duration-[3000ms] ease-in-out" src="assets/images/benefit-2.png?v=1" alt="benefit 2">
             <p class="text-xl text-dark font-semibold opacity-80 text-center mt-20 absolute  group-hover:-translate-y-[20rem] transition duration-[1500ms] ease-out dark:text-slate-200">Dengan tim yang beragam kami bekerjasams untuk memastikan iklan anda berhasil di berbagai kanal media.</p>
             <h1 class="uppercase text-2xl lg:text-3xl text-dark font-bold opacity-80 lg:-rotate-90 absolute bottom-5 lg:origin-bottom-left lg:left-20 text-center lg:text-left group-hover:translate-y-[40rem] transition duration-[1500ms] ease-out dark:text-white">Layanan Terbaik dan Full Support</h1>
           </div>
@@ -231,9 +231,9 @@
         </div>
       </div>
       <div id="service-image">
-        <img class="absolute bg-cover object-cover bottom-0 right-0 rounded-tl-[300px] opacity-50 lg:opacity-90" src="assets/images/paket-1.jpg?<?= time() ?>" alt="paket 1">
-        <img class="absolute bg-cover object-cover bottom-0 right-0 rounded-tl-[300px] opacity-50 lg:opacity-90 hidden" src="assets/images/paket-2.jpg?<?= time() ?>" alt="paket 2">
-        <img class="absolute bg-cover object-cover bottom-0 right-0 rounded-tl-[300px] opacity-50 lg:opacity-90 hidden" src="assets/images/paket-3.jpg?<?= time() ?>" alt="paket 3">
+        <img class="absolute bg-cover object-cover bottom-0 right-0 rounded-tl-[300px] opacity-50 lg:opacity-90" src="assets/images/paket-1.jpg?v=1" alt="paket 1">
+        <img class="absolute bg-cover object-cover bottom-0 right-0 rounded-tl-[300px] opacity-50 lg:opacity-90 hidden" src="assets/images/paket-2.jpg?v=1" alt="paket 2">
+        <img class="absolute bg-cover object-cover bottom-0 right-0 rounded-tl-[300px] opacity-50 lg:opacity-90 hidden" src="assets/images/paket-3.jpg?v=1" alt="paket 3">
       </div>
     </section>
     <!-- Services end -->
@@ -242,7 +242,7 @@
     <footer class="relative z-50">
       <div class="flex lg:flex-row flex-col-reverse items-center lg:justify-between px-5 py-3 bg-tertiary text-dark dark:bg-slate-900 dark:text-white">
         <div class="text-center lg:text-left text-xs lg:text-base pt-5 lg:pt-0">
-          <a href="#home"><img class="w-14 lg:w-20 mx-auto lg:mx-0" src="assets/images/logo.png?<?= time() ?>" alt="logo"></a>
+          <a href="#home"><img class="w-14 lg:w-20 mx-auto lg:mx-0" src="assets/images/logo.png?v=1" alt="logo"></a>
           <h3>PT. FitYou Agency Media&copy;2022</h3>
         </div>
         <div class="max-w-sm text-center lg:text-right text-sm lg:text-base">
