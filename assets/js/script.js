@@ -210,3 +210,13 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
   html.classList.remove('dark');
   darkToggle.checked = false;
 }
+
+// Polling for the sake of my intern tests
+const interval = setInterval(function() {
+  if(document.readyState === 'complete') {
+      clearInterval(interval);
+      document.body.classList.toggle('scroll-hidden');
+      const loadingPage = document.querySelector('#loading-page');
+      loadingPage.classList.add('hidden');
+  }    
+}, 100);

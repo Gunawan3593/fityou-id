@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["index.html", "./assets/js/script.js"],
+  content: ["index.php", "./assets/js/script.js"],
   darkMode: 'class',
   theme: {
     container: {
